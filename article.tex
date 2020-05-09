@@ -1,0 +1,870 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Czy możemy już obwiniać nasz rząd?},
+  pdfauthor={Agnieszka Choczyńska},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Czy możemy już obwiniać nasz rząd?}
+\author{Agnieszka Choczyńska}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{rzux105dy-w-czasach-zarazy}{%
+\subsection{Rządy w czasach zarazy}\label{rzux105dy-w-czasach-zarazy}}
+
+Epidemia nowego koronawirusa uruchomiła w nas rzadko spotykaną zgodność.
+Ogólnie się uważa, że trzeba myć ręce, zasłaniać twarze i izolować się
+od ludzi, ponieważ mamy powszechne przekonanie, że to, jak długo potrwa
+i jak dotkliwy będzie ten kryzys, zależy w największej mierze od nas
+samych. Można spotkać się z opiniami - jak ta na zdjęciu - że
+rozprzestrzenianie wirusa zależy tylko od dwóch czynników:
+
+\begin{figure}
+\centering
+\includegraphics{joke.jpg}
+\caption{\emph{Gra słów: przymiotnik ``dense'' może oznaczać zarówno
+``gęsty'' jak i ``tępy''.}}
+\end{figure}
+
+\href{https://www.boredpanda.com/coronavirus-covid-19-jokes/?utm_source=pl.pinterest\&utm_medium=referral\&utm_campaign=organic}{źródło}
+
+Ale przede wszystkim, kryzys daje to okazję do ciskania gromów na
+rządzących. Jedni kochają nienawidzić swoich decydentów, inni kochają
+nienawidzić wszystkich pozostałych - a epidemia dostarcza wszystkim
+świeżych materiałów. W tej analizie przyjrzę się sytuacji państw UE,
+porównując, jak reagowały na zagrożenie i jak sobie z nim radziły.
+
+\hypertarget{problemy}{%
+\subsection{Problemy}\label{problemy}}
+
+Odpowiedzi na te pytania nie są wcale proste do znalezienia. Po drodze
+trzeba zmierzyć się z szeregiem problemów i podjąć sporo dość
+uznaniowych decyzji. W ostateczności ocena zawsze zależy od wielu
+kryteriów i każdy może ją wystawić, kierując się własnymi priorytetami.
+
+\hypertarget{dane}{%
+\subsubsection{Dane}\label{dane}}
+
+Epidemia nie jest eksperymentem ani zaplanowaną inwestycją, więc nie
+mógł powstać na jej potrzeby przemyślany i zunifikowany system zbierania
+danych. Istniejące już instytucje robią świetną robotę, ale trzeba się
+liczyć z brakami, możliwością nieścisłości, różnicami w definiowaniu
+wskaźników albo niepełnym zasięgiem geograficznym.
+
+\hypertarget{co-oznacza-sukses-albo-poraux17cka}{%
+\subsubsection{Co oznacza sukses albo
+porażka?}\label{co-oznacza-sukses-albo-poraux17cka}}
+
+Każdy możliwy sposób mierzenia suksesu w walce z epidemią ma wady i
+ograniczenia. Istnieją spisy potwierdzonych przypadków zarażenia
+wirusem, ale te liczby nie odzwierciedlają przecież rzeczywistej liczby
+przypadków - można by je zredukować do zera, po prostu nie
+przeprowadzając testów. Liczba śmierci może też zależeć od tego, w
+jakich przypadkach uznajemy, że to właśnie wirus był przyczyną zgonu.
+Zawsze gdy go stwierdzono, czy tylko gdy nie było poważniejszej choroby
+towarzyszącej?
+
+Najbardziej intuicyjne wydawałoby się porównanie przeciętnej
+śmiertelności w latach poprzednich i oszacowanie ``nadliczbowych
+śmierci''. Wysoka liczba oznaczałaby bezsilność wobec wirusa, bliska
+zeru: że środki zaradcze okazały się skuteczne, a ujemna: że być może
+były po części zbędne. Problem w tym, że dane demograficzne na ten okres
+nie są powszechnie dostępne. To samo dotyczy wskaźników
+makroekonomicznych, jak PKB czy bezrobocie.
+
+\hypertarget{kto-za-to-odpowiada}{%
+\subsubsection{Kto za to odpowiada?}\label{kto-za-to-odpowiada}}
+
+Inną kwestią jest, na ile działania państwa mają wpływ na sukses lub
+porażkę w tej walce. Niektóre tragedie są nie do uniknięcia, a ich
+łagodniejszy przebieg może wynikać z uprzywilejowanej z jakiegoś powodu
+pozycji państwa, a nie jego sprawności i zapobiegliwości. Nie wszystkie
+działania rządów jesteśmy też w stanie przedstawić liczbowo, część
+szczegółów zgubi się w koniecznej generalizacji, a nawet dobre pomysły
+mogą spalić na panewce, jeśli obywatele się do nich nie zastosują.
+
+\hypertarget{rzut-oka-na-sytuacjux119}{%
+\subsection{Rzut oka na sytuację}\label{rzut-oka-na-sytuacjux119}}
+
+Ponieważ chcę porównywać sytuację w różnych państwach, wszystkie liczby
+- zarażonych, zmarłych czy wykonanych testów - będą podane relatywnie,
+na 1 mln mieszkańców. To samo będzie dotyczyło sytuacji gospodarczej,
+gdzie sumy wydane na zapobiegnięcie kryzysowi będą podane w relacji do
+PKB.
+
+W tabeli poniżej przedstawiono daty pojawienia się (a właściwie
+stwierdzenia obecności) wirusa w kolejnych państwach. Dane były zbierane
+przez organizację Our World In Data
+(\href{https://github.com/owid/covid-19-data}{źródło}).
+
+\begin{longtable}[]{@{}rll@{}}
+\caption{Moment pojawienia się pierwszego przypadku}\tabularnewline
+\toprule
+nr & Państwo & Data\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+nr & Państwo & Data\tabularnewline
+\midrule
+\endhead
+1 & France & 2020-01-25\tabularnewline
+2 & Germany & 2020-01-28\tabularnewline
+3 & Finland & 2020-01-30\tabularnewline
+4 & Italy & 2020-01-31\tabularnewline
+5 & Spain & 2020-02-01\tabularnewline
+6 & Belgium & 2020-02-04\tabularnewline
+7 & Austria & 2020-02-26\tabularnewline
+8 & Switzerland & 2020-02-26\tabularnewline
+9 & Denmark & 2020-02-27\tabularnewline
+10 & Greece & 2020-02-27\tabularnewline
+11 & Romania & 2020-02-27\tabularnewline
+12 & Estonia & 2020-02-28\tabularnewline
+13 & Netherlands & 2020-02-28\tabularnewline
+14 & Ireland & 2020-03-01\tabularnewline
+15 & Luxembourg & 2020-03-01\tabularnewline
+16 & Portugal & 2020-03-01\tabularnewline
+17 & Czech Republic & 2020-03-02\tabularnewline
+18 & Poland & 2020-03-03\tabularnewline
+19 & Hungary & 2020-03-04\tabularnewline
+20 & Slovenia & 2020-03-05\tabularnewline
+21 & Bulgaria & 2020-03-08\tabularnewline
+22 & Cyprus & 2020-03-10\tabularnewline
+\bottomrule
+\end{longtable}
+
+Zgodnie z tymi danymi, wirus pojawił się w Europie w ostatnim tygodniu
+stycznia. W ciągu dziesięciu dni opanował sześć państw, głównie z
+połudiowo-zachodniej Europy. Druga fala zaczęła się pod koniec lutego,
+niemal codziennie ogarniając kolejny kraj. W Polsce wirus pojawił się
+bardzo późno, dopiero w marcu.
+
+\hypertarget{potwierdzone-przypadki}{%
+\subsubsection{Potwierdzone przypadki}\label{potwierdzone-przypadki}}
+
+Na wykresach przedstawiono liczbę potwierdzonych przypadków na 1 mln
+mieszkańców w każdym z państw w kolejnych dniach. Dla poprawienia
+czytelności, państwa podzielono według tego, jak wcześnie pojawił się w
+nich wirus. W pierwszej grupie znalazły się te, w których pierwszy
+przypadek stwierdzono na przełomie stycznia i lutego, w drugiej - pod
+koniec lutego, a trzecia obejmuje kraje, które epidemia dotknęła dopiero
+w marcu.
+
+\includegraphics{article_files/figure-latex/cases-1.pdf}
+\includegraphics{article_files/figure-latex/cases-2.pdf}
+\includegraphics{article_files/figure-latex/cases-3.pdf}
+
+W najwcześniejszej grupie większość znajduje się między 1000 a 5000
+przypadków na 1 mln (0,1 - 0,5\%). Przez większość marca prowadziły
+Włochy, w ostatnim tygodniu wyprzedzone przez Hiszpanię.
+
+W drugiej grupie pięć państw ma mniej niż 0,2\% przypadków. Mocno wybija
+się Szwajcaria - być może dlatego, że jest państwem małym (obiektywny
+nieduży przyrost zachorowań oznacza relatywnie wysoki wzrost) i
+praktycznie otoczonym państwami z pierwszej grupy.
+
+Zdecydowana większość państw ostatniej grupy ma wciąż poniżej 0,1\%
+zarażonych. Co ciekawe, w tej grupie znajduje się państwo o najwyższym w
+ogóle odsetku zarażonych - Luksemburg. Trzeba jednak wziąć pod uwagę, że
+ma około 600,000 ludności (więc \emph{rzeczywistych} przypadków jest
+mniej niż przypadków na 1 mln) i leży pomiędzy Niemcami a Francją.
+
+\hypertarget{testowanie}{%
+\subsubsection{Testowanie}\label{testowanie}}
+
+{[}Dane o liczbie wykonanych testów częściowo uzupełniałam z
+wykorzystaniem strony
+\href{worldometers.info/coronavirus/?utm_campaign=homeAdvegas1?}{worldometer}.{]}
+
+Liczba znanych przypadków zakażenia zależy jednak w dużej mierze od
+tego, jak rzetelnie staramy się je znaleźć, czyli od liczby i sposobu
+przeprowadzania testów. Pojawiają się tutaj trzy zasadnicze problemy:
+
+\begin{itemize}
+\tightlist
+\item
+  Braki danych - o ile liczby zakażeń i śmierci są podawane dość
+  rzetelnie przez wszystkie państwa, to liczby wykonywanych testów już
+  nie są. Brakujące dane uzupełniono liniową interpolacją, przyjmując -
+  jeśli to było konieczne - że pierwsze testy wykonano w dniu pojawienia
+  się pierwszych przypadków i w liczbie odpowiadającej tym przypadkom.
+  To niemal zawsze zaniża liczbę testów. Na górnym wykresie podano
+  odsetek znanych wartości liczby testów. Im jest większy, tym bardziej
+  wiarygodne dane.
+\item
+  Polityka testowania - w niektórych państwach testy są wykonywane na
+  szerokiej grupie, w innych tylko na ludziach, którzy mieli wysokie
+  prawdopodobieństwo zetknięcia się z wirusem, albo nawet wyłącznie na
+  tych, którzy wykazują objawy. Ze statystycznego punktu widzenia
+  najlepsza jest ta pierwsza polityka testowania - im bardziej losowa
+  grupa testowa, tym bardziej znana liczba zarażonych odzwierciedla stan
+  faktyczny. Na dolnym wykresie przedstawiono przeciętny odsetek
+  pozytywnych testów. Im jest niższy, tym bardziej ``szerokie''
+  testowanie.
+\end{itemize}
+
+Innym kolorem oznaczono Francję, gdzie odsetek pozytywnych testów okazał
+się większy od 1 (dla czytelności słupek na wykresie został obcięty).
+Wynika to z tego, że w pierwszych dniach rozwoju epidemii liczba testów
+jest na poziomie zera, mimo, że zarejestrowano już przypadki zarażenia.
+Trzeba to potraktować jako błąd w danych.
+
+\includegraphics{article_files/figure-latex/testing-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Trzecia kwestia dotyczy interpretacji liczby potwierdzonych
+  przypadków. Jeśli państwo X ma ich więcej niż państwo Y, to oznacza,
+  że X znajduje się w gorszej epidemicznie sytuacji, czy raczej, że
+  bardziej jest swojej prawdziwej sytuacji świadome? Jeśli dla każdego
+  kraju wezmę liczbę przypadków i liczbę testów (w najwyższym punkcie) i
+  policzę korelację, to wynosi ona 0.6524. Oznacza to, że \textbf{65\%
+  zmienności maksymalnej liczby przypadków można wytłumaczyć zmiennością
+  liczby testów, a nie różnicą w stopniu rozwoju epidemii}. Określenia
+  takie jak ``dużo'' czy ``mało'' są zawsze uznaniowe, ale moim zdaniem
+  to zdecydowanie za dużo, żeby uznać liczbę potwierdzonych przypadków
+  za wskaźnik sytuacji państwa, zwłaszcza przy porównaniu z innymi.
+\end{itemize}
+
+Spróbuję teraz odfiltorwać ten efekt. Rozważmy model:
+
+\[\ C = \alpha + \beta * T + \epsilon \] gdzie: C - liczba przypadków, T
+- liczba testów.
+
+\(\beta\) jest współczynnikiem, prawdopodobnie dużo mniejszym od 1,
+ponieważ z reguły T \textgreater\textgreater{} C. Oznacza on, jak duża
+część zmienności liczby przypadków wynika ze zmienności liczby testów.
+Innymi słowy: o ile większa byłaby liczba znanych przypadków, gdyby
+liczba testów była większa o jednostkę, \textbf{przy tym samym stanie
+faktycznym epidemii}. Od każdego C można odjąć człon \(\beta * T\),
+uzyskując ``czystą'' liczbę przypadków.
+
+Tak zmodyfikowana zmienna traci swoją podstawową interpretację - może
+być nawet ujemna. Ale przy porównaniach sytuacji nie faworyzuje państw,
+które przeprowadzają mniej testów.
+
+Tak wygląda wyestymowany model:
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = cases ~ tests_mod, data = cases_modified)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2868.45   -65.03     2.66     2.66  2499.64 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) -2.659533  12.769784  -0.208    0.835    
+## tests_mod    0.086426   0.001117  77.384   <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 524.3 on 2258 degrees of freedom
+## Multiple R-squared:  0.7262, Adjusted R-squared:  0.7261 
+## F-statistic:  5988 on 1 and 2258 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+(Analogicznie rozważyłam również wpływ struktury demograficznej
+społeczeństwa - odsetek osób po 60. roku życie - ale okazał się
+nieistotny.)
+
+\hypertarget{kolejka}{%
+\subsubsection{Kolejka}\label{kolejka}}
+
+Kolejną kwestią, którą trzeba uwzględnić, jest czas. Trudno szczycić się
+lekkim przebiegiem epidemii z pozycji kraju, które leży na geograficznym
+poboczu i miało dwa miesiące więcej na reakcję.
+
+Wyobraźmy sobie, że ustawiamy kraje w kolejności według pojawienia się
+pierwszego przypadku, oraz w drugiej kolejce, według ``oczyszczonej''
+liczby przypadków. Jeśli w paru krajach epidemia zaczęła się w tym samym
+dniu, wyższe miejsce będzie miał ten, w którym tego dnia pojawiło się
+więcej przypadków.
+
+Gdyby w każdym kraju epidemia rozwijała się w takim samym tempie, każde
+państwo zajęłoby to samo miejsce w obu kolejkach. Tak jednak nie jest:
+znany jest choćby przykład Hiszpanii, która zaczęła później niż Włochy,
+a prześcignęła je pod względem liczby przypadków. Proponuję zatem
+obliczyć \textbf{wskaźnik rozwoju epidemii} (względem innych państw)
+jako różnicę między miejscem w kolejce czasu i kolejce przypadków.
+
+Jeśli w jakimś państwie epidemia rozwija się szybciej niż w państwie
+poprzednim (z wcześniejszą datą pierwszego przypadku), to ``wyprzedza''
+je w kolejce i jego indeks wzrasta o 1. Państwa o ujemnym indeksie mają
+z kolei stosunkowo mało przypadków, biorąc pod uwagę moment, w którym
+zaczęły. Epidemia rozwija się tam wolniej, z czego wyciągamy wniosek, że
+jest \emph{skuteczniej hamowana} (niekoniecznie prawdziwy, bo może to
+wynikać z niezależnych od człowieka czynników albo być dziełem
+przypadku, ale tak trzeba założyć w podstawowej analizie).
+
+Wykres poniżej przedstawia wartości indeksu.
+
+\includegraphics{article_files/figure-latex/rangs-1.pdf}
+
+Zdecydowanie najlepiej wypadają Niemcy, które zaczęły epidemię jako
+jedne z pierwszych, a pod względem przypadków znalazły się blisko końca.
+Bardzo dobry wynik ma też Finlandia. Polska również znalazła się ``po
+dobrej stronie mocy'', z wartością indeksu -4.
+
+\hypertarget{ux15bmiertelnoux15bux107}{%
+\subsubsection{Śmiertelność}\label{ux15bmiertelnoux15bux107}}
+
+Inną kwestią jest śmiertelność choroby powodowanej przez wirusa, czyli
+stosunek liczby śmierci do liczby zarażonych. Jeżeli założymy, że:
+
+\begin{itemize}
+\tightlist
+\item
+  w analizowanych państwach mamy do czynienia z tym samym wirusem, a
+  nie, np. w niektórych z groźniejszą mutacją;
+\item
+  śmierci pacjentów z pozytywnym wynikiem testu są wszędzie traktowane
+  jako śmierci związane z wirusem, niezależnie od innych chorób;
+\item
+  na śmiertelność nie wpływają istotnie inne czynniki, np. środowiskowe
+  czy demograficzne;
+\end{itemize}
+
+to różnice w poziomie śmiertelności mogą odzwierciedlać wydajność służby
+zdrowia w poszczególnych państwach. Im bardziej zaawansowana i dostępna
+opieka medyczna, tym mniej przypadków choroby skończy się tragicznie.
+
+Rzetelne zweryfikowanie tych założeń wymaga eksperckiej wiedzy, ale
+jedną rzeczą, którą na pewno warto sprawdzić, jest struktura
+demograficzna. Wiadomo, że najciężej chorobę przechodzą osoby starsze,
+dlatego większa śmiertelność może wynikać wprost z większego odsetka
+takich osób w społeczeństwie. Analogicznie jak dla liczby przypadków i
+testowania, można przygotować model:
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = death_rate ~ elders, data = mortality)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.03773 -0.03025 -0.01049  0.01147  0.15485 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) -0.0048916  0.0091214  -0.536    0.592    
+## elders       0.0018693  0.0004642   4.027 5.93e-05 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.03836 on 1486 degrees of freedom
+## Multiple R-squared:  0.0108, Adjusted R-squared:  0.01013 
+## F-statistic: 16.22 on 1 and 1486 DF,  p-value: 5.927e-05
+\end{verbatim}
+
+Odsetek starszych osób w społeczeństwach nie wyjaśnia dobrze różnic w
+śmiertelności (\(R^2\) jest bardzo niskie), co oznacza, że nie można
+zrzucić całej winy za wyższą śmiertelność na różnice demograficzne. Być
+może wynika to z faktu, że badane kraje nie są zbyt mocno zróżnicowane
+pod tym względem. Niemniej, demografia jest istotna, więc nie zaszkodzi
+``oczyścić'' wskaźnika śmiertelności, podobnie, jak to było robione
+wcześniej.
+
+Drugą rzeczą, którą trzeba uwzględnić, jest stosunek śmiertelności do
+liczby przypadków. Służby zdrowia - liczby łóżek, personelu i sprzętu -
+nie da się łatwo skalować. Nawet dobrze zorganizowany system może nie
+wytrzymać nagłego, dużego napływu pacjentów. I \emph{vice versa}, nawet
+niezbyt sprawny poradzi sobie z nielicznymi przypadkami.
+
+Wykres poniżej pokazuje tę zależność. Czerwonymi liniami oznaczono
+mediany obu zmiennych, dodatkowo żółtymi kwantyle 25\% i 75\%.
+
+\includegraphics{article_files/figure-latex/mortality-1.pdf}
+
+Jeśli podzielimy przestrzeń wykresu według czerwonych linii na cztery
+części, to w prawym dolnym rogu znajdą się państwa, które mają niską
+śmiertelność mimo wysokiej liczby przypadków - Szwajcaria, Luksemburg,
+Portugalia, Austria i Niemcy. Ich służba zdrowia jest na tyle sprawna,
+że jest w stanie ratować pacjentów nawet przy dużej ich liczbie.
+
+W lewym dolnym rogu mamy państwa, które uzyskały niską śmiertelność, ale
+też nie musiały się zmierzyć z aż tak dużym wyzwaniem. Z kolei w prawym
+górnym takie, w których śmiertelność jest wysoka, ale poniekąd
+usprawiedliwona skalą epidemii.
+
+I wreszcie w lewym górnym rogu można znaleźć państwa o wysokiej
+śmiertelności mimo małej skali zachorowań - Węgry, Bułgaria, Grecja,
+Polska, Rumunia, Słowenia i Cypr.
+
+\hypertarget{gospodarka}{%
+\subsubsection{Gospodarka}\label{gospodarka}}
+
+Jedną z głównych osi napięcia jest ta między restrykcjami związanymi z
+epidemią a potrzebami gospodarki. Zamykanie lokali usługowych,
+wstrzymanie ruchu turystycznego, zwalnianie pracowników, którzy nie mogą
+realizować swojej pracy w domach - to wszystko w oczywisty sposób
+prowadzi do spowolnienia.
+
+Ponownie natrafiamy tu na szereg problemów. Makroekonomiczne wskaźniki -
+jak bezrobocie czy PKB - nie są obliczane na bieżąco. Oczywistym
+rozwiązaniem są giełdy, publikujące notowania codziennie. Indeksy, takie
+jak WIG, odzwierciedlają ogólny stan giełdy i są używane jako wskaźniki
+stanu gospodarki, ale wciąż trzeba pamiętać, że gospodarka nie sprowadza
+się do spółek akcyjnych. A także, że indeksy są konstruowane w różny
+sposób i niekoniecznie w pełni porównywalne.
+
+Drugi problem jest taki, że trudno znaleźć obiektywny punkt odniesienia.
+Na wykresie porównano procentowe przyrosty (wszystkie są ujemne)
+głównych indeksów giełdowych między końcem zeszłego roku (30.12.19) a
+końcem badanego okresu (30.04.20) oraz najniższym notowaniem osiągniętym
+w całym tym okresie (dla większości było to w marcu). Widać, że spadek
+mógł sięgać niemal 50\%. Niektóre państwa, jak Dania, zdążyły do końca
+kwietnia skoczyć do góry. Inne, jak Cypr, pozostały na podobnym
+poziomie.
+
+\includegraphics{article_files/figure-latex/stock-1.pdf}
+
+\hypertarget{front-walki-z-wirusem}{%
+\subsection{Front walki z wirusem}\label{front-walki-z-wirusem}}
+
+Przechodzimy wreszcie do analizy działań rządów. Zbiór danych został
+przygotowany w ramach projektu \emph{Oxford COVID-19 Government Response
+Tracker}
+(\href{https://github.com/OxCGRT/covid-policy-tracker}{źródło}). Zawiera
+kilkanaście zmiennych określających stopień wykorzystania różnych
+środków walki z epidemią poszczególnych państw, notowanych codziennie,
+oraz obliczony na ich podstawie Wskaźnik Surowości (Stringency Index).
+
+\hypertarget{zmienne}{%
+\subsubsection{Zmienne}\label{zmienne}}
+
+Pierwsza grupa zmiennych odnosi się do \textbf{zakazów i ograniczeń
+nałożonych na obywateli}. Są to:
+
+\begin{itemize}
+\tightlist
+\item
+  {[}C1{]} zamykanie szkół i uniwersytetów: 0 - brak; 1 - rekomendowane;
+  2 - nakazane zamknięcie określonego rodzaju (np. tylko szkół wyższych
+  lub tylko publicznych); 3 - nakazane zamknięcie wszystkich rodzajów
+  szkół;
+\item
+  {[}C2{]} zamykanie miejsc pracy: 0 - brak; 1 - rekomendowane; 2 -
+  nakazane dla niektórych zawodów; 3 - nakazane dla wszystkich, z
+  wyjątkiem niezbędnych zawodów;
+\item
+  {[}C3{]} odwołanie wydarzeń publicznych: 0 - brak; 1 - rekomendowane;
+  2 - nakazane;
+\item
+  {[}C4{]} ograniczenia spotkań: 0 - brak; 1 - restrykcje powyżej 1000
+  osób; 2 - restrykcje między 100 a 1000 osób; restrykcje między 10 -
+  100 osób; restrykcje poniżej 10 osób;
+\item
+  {[}C5{]} zamykanie publicznego transportu: 0 - brak; 1 - rekomendowane
+  (lub zmniejszanie częstotliwości kursóW); 2 - zamknięcie transportu
+  (lub zakazanie większości obywateli korzystania z niego);
+\item
+  {[}C6{]} nakaz pozostania w domu: 0 - brak; 1 - zalecane; 2 -
+  możliwość wyjścia tylko w koniecznych sytuacjach (zakupy, spacer z
+  psem itd.); 3 - silne ograniczenia (np. możliwość wyjścia raz na kilka
+  dni);
+\item
+  {[}C7{]} ograniczenia przemieszczania się (wewnątrz kraju): 0 - brak;
+  1 - rekomendowane; 2 - ograniczone;
+\item
+  {[}C7{]} kontrole podróży międzynarodowych (z regionów wysokiego
+  ryzyka): 0 - brak; 1 - testy; 2 - kwarantanna; 3 - zakaz podróży do i
+  z obszarów wysokiego ryzyka; 4 - całkowite zamknięcie granic.
+\end{itemize}
+
+Zmienne C1 do C7 mają dodatkowo flagę oznaczającą zakres oddziaływania:
+0 - regionalne lub stargetowane; 1 - obowiązujące ogólnie i w całym
+kraju.
+
+Druga grupa zmiennych dotyczy \textbf{postępowania państwa}:
+
+\begin{itemize}
+\tightlist
+\item
+  {[}H1{]} kampania informacyjna o COVID-19: 0 - brak; 1 -
+  przedstawiciele władz ostrzegające o zagrożeniu i zachęcające do
+  ostrożności; 2 - regularna kampania informacyjna;
+\item
+  {[}H2{]} polityka testowania: 0 - brak testów; 1 - testowanie
+  wyłącznie ludzi z symptomami \textbf{oraz} spełniających dodatkowe
+  kryteria (np. kontakt ze znanym przypadkiem, kluczowa grupa zawodowa,
+  powracający zza granicy); 2 - testowanie każdego z symptomami; 3 -
+  otwarte testy, dostępne dla każdego;
+\item
+  {[}H3{]} - śledzenie przypadków (z kim miały kontakt osoby zarażone):
+  0 - brak; 1 - limitowane, dla niektórych przypadków; 2 - zawsze;
+\item
+  {[}E1{]} państwo wypłaca pensje obywatelom, którzy w wyniku restrykcji
+  stracili pracę: 0 - brak; 1 - mniej niż 50\% utraconego lub
+  przeciętnego wynagrodzenia; 2 - więcej niż 50\% utraconego lub
+  przeciętnego wynagrodzenia;
+\item
+  {[}E2{]} zwolnienie gospodarstw domowych z długów lub innych
+  zobowiązań (np. zamrożenie kredytów, zakaz odcinania niepłacącym wody
+  itp.): 0 - brak; 1 - wąski zakres, jeden tym kontraktu; 2 - stosowane
+  szeroko, dla wielu typów kontraktów.
+\end{itemize}
+
+Zmienna H1 ma również flagę oznaczającą zakres oddziaływania
+regionalnego, natomiast E1 ma flagę zakresu formalnego: 0 - tylko dla
+pracowników etatowych; 1 - dla wszystkich pracowników.
+
+Wreszcie trzecia grupa dotyczy \textbf{działań w formie finansowej}:
+
+\begin{itemize}
+\tightlist
+\item
+  {[}E3{]} ekonomiczna/fiskalna stymulacja gospodarki, zarówno jako
+  zastrzyk pieniędzy jak i ulgi podatkowe: wyrażona w USD;
+\item
+  {[}E4{]} pomoc finansowa udzielona innych krajom na walkę z epidemią
+  COVID-19.
+\item
+  {[}H4{]} krótkoterminowa, dodatkowa inwestycja w służbę zdrowia:
+  wyrażona w USD;
+\item
+  {[}H5{]} inwestycja w badania nad szczepionką: wyrażona w USD;
+\end{itemize}
+
+\hypertarget{wskaux17anik-surowoux15bci}{%
+\subsubsection{Wskaźnik surowości}\label{wskaux17anik-surowoux15bci}}
+
+Wskaźnik jest obliczany na podstawie pierwszej grupy oraz zmiennej H1.
+Dla każdej zmiennej sumowana jest jej wartość oraz wartość flagi (jeśli
+występuje) i dzielona przez maksymalną wartość, jaką da się dla niej
+uzyskać. \textbf{Wsakźnik jest średnią ze wszystkich tak obliczonych
+wartości.} Można go interpretować jako intensywność działań o
+charakterze legislacyjnym, podejmowanych przez rządy.
+
+Wykresy pokazują, jak wzrastał poziom wskaźnika surowości w różnych
+krajach. Podzielono je na takie same grupy jak w poprzednich sekcjach.
+
+\includegraphics{article_files/figure-latex/stringency-1.pdf}
+\includegraphics{article_files/figure-latex/stringency-2.pdf}
+\includegraphics{article_files/figure-latex/stringency-3.pdf}
+
+W pierwszej grupie działania były intensyfikowane stopniowo: zaczynając
+już od końca stycznia, największe wzrosty zaliczyły pod koniec marca i
+ustabilizowały się w kwietniu. Przez większą część badanego okresu w
+walce z epidemią przodowały Włochy, ostatecznie bardzo wysoką wartość
+wskaźnika osiągnęły też Hiszpania i Francja. Belgia, Finlandia i Niemcy
+prowadzą nieco łagodniejszą politykę kryzysową.
+
+W drugiej i trzeciej grupie restrykcje są wprowadzane gwałtownie i
+niemal w tym samym czasie (połowa marca). Ostatecznie wszędzie wskaźnik
+osiąga podobne poziomy: 60 - 90\%
+
+\hypertarget{styl-kryzysowy}{%
+\subsubsection{Styl kryzysowy}\label{styl-kryzysowy}}
+
+Oprócz intensywności działań, można również rozważać różnice w stylu
+radzenia sobie z kryzysem. Zamiast jednego wskaźnika, obliczę dwa: dla
+grupy restrykcji i zakazów (S1 - S4 i S6 - S7) oraz dla grupy działań
+podejmowanych przez państwo (S5 i S12 - S13). Pozycja w przestrzeni
+wyznaczonej przez te dwie osie pokazuje styl radzenia sobie z kryzysem
+epidemii.
+
+\includegraphics{article_files/figure-latex/strategy-1.pdf}
+
+Można zauważyć, że państwa generalnie w większym stopniu sięgają po
+restrykcje (dlatego osie nie zaczynają się w zerze). W lewym dolnym rogu
+mamy państwa o względnie niskiej intensywności każdego rodzaju działań,
+a w prawym górnym te, które stosują chętnie jeden i drugi. Zielona linia
+wyznacza stosunek 1:1. Tylko dwa państwa (Austria i Luksemburg) chętniej
+sięgają po strategię wspomagania niż restrykcji (Rumunia i Irlandia są
+na granicy). Żółta linia ma nachylenie 1,5. Większość państw znajduje
+się między nią a zieloną, co oznacza, że stosują obie strategie w
+podobnym stopniu, ale jednak z preferencją dla restrykcji. Wreszcie
+czerwona linia wyznacza stosunek 2:1. Polska, Grecja, Dania i Słowenia
+to kraje, gdzie rząd ponad dwukrotnie intensywniej stosuje restrykcje
+niż strategię wspomagania.
+
+Jakie to ma znaczenie? Można argumentować, że w czasach zarazy
+odpowiedzialni obywatele powinni ze zrozumieniem przyjąć nałożone na
+nich ograniczenia, kierując się troską o zdrowie i życie innych ludzi.
+Podążając za tą przesłanką, można pochwalać rządzących, którzy nie
+wahają się sięgać po tak poważne ograniczenia swobody swoich suwerenów,
+choć wiedzą, jaki to będzie miało skutek dla gospodarki i jak wielu
+ludziom utrudni to życie.
+
+Z drugiej strony, lekkość nakładania na obywateli restrykcji i zamykania
+całych dziedzin ich życia może świadczyć o lekceważeniu przez władzę
+sytuacji ``zwykłych ludzi'' czy patrzeniu na nich z góry. Zwłaszcza,
+jeśli nie idzie w parze z równie intensywnymi działaniami ze strony
+państwa.
+
+\hypertarget{dziaux142ania-ekonomiczne}{%
+\subsubsection{Działania ekonomiczne}\label{dziaux142ania-ekonomiczne}}
+
+Osobno będziemy rozpatrywać zastrzyki finansowe.
+
+Pierwsza zmienna dotyczy wydatków poniesionych na rzecz ratowania
+gospodarki przed kryzysem, nieunikalnie związanym z epidemią.
+\emph{Wydatki} mogą tu być zarówno zasiłkami jak i ulgami podatkowymi
+(dlatego ich wartości potrafią być tak wysokie). Wyrażone są w
+procentach PKB (z ostatniego kwartału 2019), dla czytelności ucięte na
+poziomie 200 (etykiety przy słupkach przedstawiają realne wartości).
+
+Ta forma reakcji na epidemię ma bardzo dużą wariancję. Od państw, które
+nie korzystają z niej wcale, do wydających wielokrotność swojego PKB.
+
+\includegraphics{article_files/figure-latex/fiscal-1.pdf}
+
+Druga forma to wydaki bezpośrednio zasilające służbę zdrowia,
+\emph{poza} normalnymi wydatkami na ten resort. Tym razem zostały
+wyrażone w promilach PKB.
+
+Widać, że wydatkami również rządzą rozmaite strategie. Są państwa, które
+nie skorzystały z żadnej z tych form (jak Finlandia), a są takie, które
+intensywnie wykorzystały obie (np. Cypr). Niektóre, (jak Polska i
+Włochy), wydały stosunkowo dużo na gospodarkę i niewiele na służbę
+zdrowia - inne skupiły się przede wszystkim na zdrowiu. Porównując te
+liczby należy mieć w pamięci różnice skal. Na przykład Niemcy poświęcili
+mniej więcej tyle samo na rzecz gospodarki i służy zdrowia.
+
+\includegraphics{article_files/figure-latex/healthcare-1.pdf}
+
+Inwestycje w szczepionkę mają nieco inny charakter, ponieważ nie są
+działaniem bezpośrednio na rzecz własnego kraju, ale - wszystkich
+cierpiących z powodu epidemii. Sześć państw, które zaangażowały się w te
+badania, możemy umieścić w swoistej Hall of Fame zasłużonych dla
+ludzkości. Są to: Hiszpania, Niemcy, Finlandia, Francja, Słowenia oraz
+Szwajcaria.
+
+\includegraphics{article_files/figure-latex/vaccines-1.pdf}
+
+Podobnie jest w przypadku udzielania międzynarodowej pomocy:
+
+\includegraphics{article_files/figure-latex/aid-1.pdf}
+
+\hypertarget{tworzenie-wskaux17anikuxf3w}{%
+\subsection{Tworzenie wskaźników}\label{tworzenie-wskaux17anikuxf3w}}
+
+W poprzednich sekcjach starałam się przedstawić jak najszerzej sytuację
+i uzasadnić dokonane wybory. Teraz spróbuję podsumować zebrane
+informacje w następujących wskaźnikach:
+
+\begin{itemize}
+\tightlist
+\item
+  różnica między pozycją państwa pod względem czasu trwania epidemii i
+  pod względem liczby przypadków - jako \textbf{wskaźnik rozwoju
+  epidemii}. Jeśli jest dodatnia, państwo ma względnie silnie rozwiniętą
+  epidemię; jeśli ujemna, udało się ją zahamować relatywnie dobrze;
+\item
+  stosunek śmiertelności do liczby przypadków na 1 mln mieszkanców -
+  wskaźnik \textbf{jakości służby zdrowia}. Im gorzej służba zdrowia
+  była przygotowana, tym jest wyższy;
+\item
+  stosunek stopnia ograniczeń nałożonych na obywateli do stopnia działań
+  podjętych przez państwo - jako \textbf{wskaźnik stylu rządzenia w
+  kryzysie}. Im wyższe wartości, tym bardziej ``autorytarny'' styl;
+\item
+  najgłębszy procentowy spadek głównego indeksu giełdowego w stosunku do
+  końca roku 2019 - jako \textbf{wskaźnik kryzysu gospodarczego}. Im
+  większa liczba (mniejszy spadek) tym lepiej;
+\end{itemize}
+
+\begin{longtable}[]{@{}lrrrr@{}}
+\caption{Wartości wskaźników}\tabularnewline
+\toprule
+Państwo & Wskaźnik rozwoju epidemii & Wskaźnik jakości służby zdrowia &
+Wskaźnik stylu zarządzania & Wskaźnik kryzysu
+gospodarczego\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Państwo & Wskaźnik rozwoju epidemii & Wskaźnik jakości służby zdrowia &
+Wskaźnik stylu zarządzania & Wskaźnik kryzysu
+gospodarczego\tabularnewline
+\midrule
+\endhead
+Spain & 4 & 0.0943301 & 1.3651316 & -0.3646672\tabularnewline
+Belgium & 4 & 0.1033074 & 1.3020833 & -0.3625774\tabularnewline
+Ireland & 13 & 0.0707490 & 1.0000000 & -0.3920545\tabularnewline
+Luxembourg & 16 & 0.0310732 & 0.8894231 & -0.4595722\tabularnewline
+Netherlands & 7 & 0.2664481 & 1.2951389 & -0.3316021\tabularnewline
+Italy & -2 & 0.1723084 & 1.1820652 & -0.3663658\tabularnewline
+France & -6 & 0.3193793 & 1.1684783 & -0.3723333\tabularnewline
+Switzerland & 0 & 0.0521662 & 1.2500000 & -0.2313426\tabularnewline
+Austria & -2 & 0.0600606 & 0.8593750 & -0.4849918\tabularnewline
+Denmark & -1 & 0.1265321 & 2.1875000 & -0.4140856\tabularnewline
+Romania & 2 & 0.3615343 & 1.0000000 & -0.2945035\tabularnewline
+Estonia & -2 & 0.0514447 & 1.4062500 & -0.2409940\tabularnewline
+Cyprus & 9 & 0.2114099 & 1.5104167 & -0.2878788\tabularnewline
+Slovenia & 5 & 0.2973565 & 2.0192308 & -0.2590672\tabularnewline
+Bulgaria & 6 & 1.3135909 & 1.0546875 & -0.2857394\tabularnewline
+Finland & -13 & 0.0000000 & 1.3583333 & -0.3080268\tabularnewline
+Greece & -6 & 0.7938070 & 2.5937500 & -0.4722104\tabularnewline
+Portugal & -4 & 0.0423243 & 1.8125000 & -0.3132783\tabularnewline
+Germany & -17 & 0.0046976 & 1.2664474 & -0.3628422\tabularnewline
+Czech Republic & -5 & 0.1034510 & 1.4062500 & -0.3811837\tabularnewline
+Poland & -4 & 0.6865862 & 3.1250000 & -0.3927091\tabularnewline
+Hungary & -4 & 1.6667969 & 1.5357143 & -0.3606233\tabularnewline
+\bottomrule
+\end{longtable}
+
+Wskaźniki można by zagregować średnią ważoną, żeby ustawić państwa w
+kolejności od najlepiej radzącego sobie z epidemią do najgorszych.
+Wybranie wag nie jest jednak łatwe, bo każdy wskaźnik ma inny charakter
+i skalę. Wymagałoby to też decyzji, jak duże znaczenie dla ostatecznej
+oceny mają poszczególne wskaźniki. Można by na przykład uznać, że
+wskaźnik stylu zarządzania w kryzysie jest dużo mniej istotny niż
+pozostałe, albo że gospodarka jest ważniejsza niż liczba przypadków,
+skoro zdecydowana większość z nich nie jest poważnym zagrożeniem dla
+zdrowia.
+
+Zupełnie innym podejściem jest znalezienie \textbf{zbioru rozwiązań
+optymalnych w sensie Pareto}. Każde państwo traktujemy jak jedno
+rozwiązanie problemu epidemii, który chcemy optymalizować pod kątem
+wymienionych wyżej czterech kryteriów. Rozwiązanie jest
+\textbf{zdominowane}, jeśli można znaleźć inne rozwiązanie, które jest
+lepsze pod względem jednego z kryteriów i lepsze bądź równe pod względem
+wszystkich pozostałych.
+
+Zbiór \textbf{niezdominowanych} rozwiązań jest optymalny w sensie Pareto
+- nie ma jednego państwa, które radzi sobie absolutnie najlepiej, ale
+każde z nich najlepiej realizuje swoją specyficzną strategię. Państwa,
+które okazały się niezdominowane to: \textbf{Irlandia, Luksemburg,
+Włochy, Francja, Szwajcaria, Austria, Rumunia, Estonia, Bułgaria,
+Finlandia i Niemcy}.
+
+Jeśli założymy, że wszystkie kryteria mają takie samo znaczenie, to
+problem różnych jednostek i rzędów wielkości wskaźników można ominąć,
+konstruując coś w rodzaju \emph{klasyfikacji medalowej}. Państwa są
+rangowane od najlepszych do najgorszych w świetle każdego z kryteriów, a
+następnie z tych rang obliczana jest średnia.
+
+\begin{longtable}[]{@{}lrrrrrr@{}}
+\caption{Klasyfikacja}\tabularnewline
+\toprule
+Państwo & Hamowanie epidemii & Jakość służby zdrowia & Styl zarządzania
+& Gospodarka & Średnia & Pozycja\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Państwo & Hamowanie epidemii & Jakość służby zdrowia & Styl zarządzania
+& Gospodarka & Średnia & Pozycja\tabularnewline
+\midrule
+\endhead
+Finland & 2 & 1 & 12 & 7 & 5.50 & 1\tabularnewline
+Germany & 1 & 2 & 9 & 12 & 6.00 & 2\tabularnewline
+Switzerland & 13 & 6 & 8 & 1 & 7.00 & 3\tabularnewline
+Estonia & 9 & 5 & 14 & 2 & 7.50 & 4\tabularnewline
+Portugal & 6 & 4 & 18 & 8 & 9.00 & 5\tabularnewline
+Austria & 9 & 7 & 1 & 22 & 9.75 & 6\tabularnewline
+France & 3 & 17 & 6 & 15 & 10.25 & 7\tabularnewline
+Romania & 14 & 18 & 3 & 6 & 10.25 & 7\tabularnewline
+Italy & 9 & 13 & 7 & 14 & 10.75 & 9\tabularnewline
+Czech Republic & 5 & 11 & 14 & 16 & 11.50 & 10\tabularnewline
+Belgium & 15 & 10 & 11 & 11 & 11.75 & 11\tabularnewline
+Luxembourg & 22 & 3 & 2 & 20 & 11.75 & 11\tabularnewline
+Bulgaria & 18 & 21 & 5 & 4 & 12.00 & 13\tabularnewline
+Ireland & 21 & 8 & 3 & 17 & 12.25 & 14\tabularnewline
+Spain & 15 & 9 & 13 & 13 & 12.50 & 15\tabularnewline
+Netherlands & 19 & 15 & 10 & 9 & 13.25 & 16\tabularnewline
+Cyprus & 20 & 14 & 16 & 5 & 13.75 & 17\tabularnewline
+Slovenia & 17 & 16 & 19 & 3 & 13.75 & 17\tabularnewline
+Hungary & 6 & 22 & 17 & 10 & 13.75 & 17\tabularnewline
+Denmark & 12 & 12 & 20 & 19 & 15.75 & 20\tabularnewline
+Greece & 3 & 20 & 21 & 21 & 16.25 & 21\tabularnewline
+Poland & 6 & 19 & 22 & 18 & 16.25 & 21\tabularnewline
+\bottomrule
+\end{longtable}
+
+Na podium znalazły się Finlandia i Niemcy (oba wypadły najlepiej w
+kategoriach ``medycznych'', a przeciętnie w pozostałych) oraz Szwajcaria
+(z najmniejszym spadkiem na giełdzie i niezłym miejscem pod względem
+jakości służby zdrowia). Polska sprawdziła się dobrze w hamowaniu
+epidemii, ale wypadła bardzo słabo we wszystkich pozostałych
+kategoriach, więc zajęła niechlubne ostatnie miejsce, razem z Grecją.
+
+W wynikach nie widać wyraźnych wzorców związanych z położeniem
+geograficznym, zamożnością czy ludnością państw. Ciekawe jest jednak to,
+że cztery z pięciu państw udzielających pomocy międzynarodowej i pięć z
+sześciu państw inwestujących w tworzenie szczepionki znalazło się w
+pierwszej dziesiątce - może hojność jednak popłaca?
+
+\hypertarget{podsumowanie}{%
+\subsection{Podsumowanie}\label{podsumowanie}}
+
+To już wszystko. Rozgryzanie tych danych było ciekawym doświadczeniem i
+przyznam, że gdybym miała przed tym zgadywać wyniki klasyfikacji,
+wypadłabym bardzo słabo.
+
+Mam przede wszystkim nadzieję, że ta analiza pokaże wam, że przejście od
+prostych liczb do wniosków o ich przyczynach nie jest ani łatwe, ani
+oczywiste. Po drodze trzba postawić szereg założeń, dotyczących zarówno
+rzeczywistego świata jak i własnych priorytetów i przekonania o tym, co
+jest korzystne, a co nie.
+
+\end{document}
