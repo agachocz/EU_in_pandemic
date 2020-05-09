@@ -16,7 +16,7 @@ library(tidyr)
 library(ggrepel)
 ```
 
-## Rządy w czasach zarazy
+# Rządy w czasach zarazy
 
 Epidemia nowego koronawirusa uruchomiła w nas rzadko spotykaną zgodność. Ogólnie się uważa, że trzeba myć ręce, zasłaniać twarze i izolować się od ludzi, ponieważ mamy powszechne przekonanie, że to, jak długo potrwa i jak dotkliwy będzie ten kryzys, zależy w największej mierze od nas samych. Można spotkać się z opiniami - jak ta na zdjęciu - że rozprzestrzenianie wirusa zależy tylko od dwóch czynników:
 
@@ -25,20 +25,22 @@ Epidemia nowego koronawirusa uruchomiła w nas rzadko spotykaną zgodność. Og�
 
 [źródło](https://www.boredpanda.com/coronavirus-covid-19-jokes/?utm_source=pl.pinterest&utm_medium=referral&utm_campaign=organic)
 
-Ale przede wszystkim, kryzys daje okazję do ciskania gromów na rządzących. Jedni kochają nienawidzić swoich decydentów, inni kochają nienawidzić wszystkich pozostałych - a epidemia dostarcza wszystkim świeżych materiałów. W tej analizie przyjrzę się sytuacji państw UE, porównując, jak reagowały na zagrożenie i jak sobie z nim radziły.
+Ale przede wszystkim, kryzys daje okazję do ciskania gromów na rządzących. Jedni kochają nienawidzić swoich decydentów, inni kochają nienawidzić wszystkich pozostałych - a epidemia dostarcza wszystkim świeżych materiałów. 
+
+W tej analizie chcę przyjrzeć się sytuacji państw UE, porównując, jak reagowały na zagrożenie i jak sobie z nim radziły. 
 
 
-## Problemy
+# Problemy
 
-Odpowiedzi na te pytania nie są wcale proste do znalezienia. Po drodze trzeba zmierzyć się z szeregiem problemów i podjąć sporo dość uznaniowych decyzji. W ostateczności ocena zawsze zależy od wielu kryteriów i każdy może ją wystawić, kierując się własnymi priorytetami.
+Odpowiedzi na te pytania nie są wcale proste do znalezienia. Po drodze trzeba zmierzyć się z szeregiem problemów i podjąć sporo dość uznaniowych decyzji. **W ostateczności ocena zawsze zależy od wielu kryteriów i każdy może ją wystawić, kierując się własnymi priorytetami.**
 
 
-### Dane
+## Dane
 
 Epidemia nie jest eksperymentem ani zaplanowaną inwestycją, więc nie mógł powstać na jej potrzeby przemyślany i zunifikowany system zbierania danych. Istniejące już instytucje robią świetną robotę, ale trzeba się liczyć z brakami, możliwością nieścisłości, różnicami w definiowaniu wskaźników albo niepełnym zasięgiem geograficznym.
 
 
-### Co oznacza sukces albo porażka?
+## Co oznacza sukces albo porażka?
 
 Każdy możliwy sposób mierzenia suksesu w walce z epidemią ma wady i ograniczenia. 
 Istnieją spisy potwierdzonych przypadków zarażenia wirusem, ale te liczby nie odzwierciedlają przecież rzeczywistej liczby przypadków - można by je zredukować do zera, po prostu nie przeprowadzając testów. Liczba śmierci może też zależeć od tego, w jakich przypadkach uznajemy, że to właśnie wirus był przyczyną zgonu. Zawsze gdy go stwierdzono, czy tylko gdy nie było poważniejszej choroby towarzyszącej?
@@ -46,7 +48,7 @@ Istnieją spisy potwierdzonych przypadków zarażenia wirusem, ale te liczby nie
 Najbardziej intuicyjne wydawałoby się porównanie przeciętnej śmiertelności w latach poprzednich i oszacowanie "nadliczbowych śmierci". Wysoka liczba oznaczałaby bezsilność wobec wirusa, bliska zeru: że środki zaradcze okazały się skuteczne, a ujemna: że być może były po części zbędne. Problem w tym, że dane demograficzne na ten okres nie są powszechnie dostępne. To samo dotyczy wskaźników makroekonomicznych, jak PKB czy bezrobocie.  
 
 
-### Kto za to odpowiada?
+## Kto za to odpowiada?
 
 Inną kwestią jest, na ile działania państwa mają wpływ na sukses lub porażkę w tej walce. Niektóre tragedie są nie do uniknięcia, a ich łagodniejszy przebieg może wynikać z uprzywilejowanej z jakiegoś powodu pozycji państwa, a nie jego sprawności i zapobiegliwości. Nie wszystkie działania rządów jesteśmy też w stanie przedstawić liczbowo, część szczegółów zgubi się w koniecznej generalizacji, a nawet dobre pomysły mogą spalić na panewce, jeśli obywatele się do nich nie zastosują.
 
@@ -90,7 +92,9 @@ elders <- read.csv("elders.tsv") %>% filter(country %in% countries_list)
 
 ```
 
-## Rzut oka na sytuację
+# Rzut oka na sytuację
+
+## Początek
 
 Ponieważ chcę porównywać sytuację w różnych państwach, wszystkie liczby - zarażonych, zmarłych czy wykonanych testów - będą podane relatywnie, na 1 mln mieszkańców. To samo będzie dotyczyło sytuacji gospodarczej, gdzie sumy wydane na zapobiegnięcie kryzysowi będą podane w relacji do PKB.
 
@@ -104,7 +108,7 @@ kable(first_cases_table, caption = "Moment pojawienia się pierwszego przypadku"
 
 Zgodnie z tymi danymi, wirus pojawił się w Europie w ostatnim tygodniu stycznia. W ciągu dziesięciu dni opanował sześć państw, głównie z połudiowo-zachodniej Europy. Druga fala zaczęła się pod koniec lutego, niemal codziennie ogarniając kolejny kraj. W Polsce wirus pojawił się bardzo późno, dopiero w marcu.
 
-### Potwierdzone przypadki
+## Potwierdzone przypadki
 
 Na wykresach przedstawiono liczbę potwierdzonych przypadków na 1 mln mieszkańców w każdym z państw w kolejnych dniach. Dla poprawienia czytelności, państwa podzielono według tego, jak wcześnie pojawił się w nich wirus. W pierwszej grupie znalazły się te, w których pierwszy przypadek stwierdzono na przełomie stycznia i lutego, w drugiej - pod koniec lutego, a trzecia obejmuje kraje, które epidemia dotknęła dopiero w marcu.
 
@@ -140,7 +144,7 @@ W drugiej grupie pięć państw ma mniej niż 0,2% przypadków. Mocno wybija si�
 Zdecydowana większość państw ostatniej grupy ma wciąż poniżej 0,1% zarażonych. Co ciekawe, w tej grupie znajduje się państwo o najwyższym w ogóle odsetku zarażonych - Luksemburg.  Trzeba jednak wziąć pod uwagę, że ma około 600,000 ludności (więc *rzeczywistych* przypadków jest mniej niż przypadków na 1 mln) i leży pomiędzy Niemcami a Francją.
 
 
-### Testowanie
+## Testowanie
 
 [Dane o liczbie wykonanych testów częściowo uzupełniałam z wykorzystaniem strony [worldometer](worldometers.info/coronavirus/?utm_campaign=homeAdvegas1?).]
 
@@ -219,7 +223,7 @@ $R^2$ = `r round(summ$r.squared,4)`
 (Analogicznie rozważyłam również wpływ struktury demograficznej społeczeństwa - odsetek osób po 60. roku życie - ale okazał się nieistotny.)
 
 
-### Kolejka
+## Kolejka
 
 Kolejną kwestią, którą trzeba uwzględnić, jest czas. Trudno szczycić się lekkim przebiegiem epidemii z pozycji kraju, które leży na geograficznym poboczu i miało dwa miesiące więcej na reakcję. 
 
@@ -267,7 +271,7 @@ Zdecydowanie najlepiej wypadają Niemcy, które zaczęły epidemię jako jedne z
 
 
 
-### Śmiertelność
+## Śmiertelność
 
 Inną kwestią jest śmiertelność choroby powodowanej przez wirusa, czyli stosunek liczby śmierci do liczby zarażonych. Jeżeli założymy, że:
 
@@ -345,7 +349,7 @@ Ostatnim czynnikiem, który tu rozważałam, było PKB. Moglibyśmy się spodzie
 
 Dlaczego tak się dzieje? Oczywiście może istnieć wiele czynników uniezależniających jakość służby zdrowia od PKB (np. różnice w tym, jak duża część PKB idzie na służbę zdrowia, albo "nieprodukcyjny" charakter tej dziedziny), ale w tym przypadku prawdopodobnie wynika to z silnego związku między zamożnością państw a rozwojem epidemii. Z pierwszych 10 państw, w których pojawił się wirus, aż 7 jest w pierwszej dziesiątce pod względem PKB. Dzieląc śmiertelność przez rozmiar epidemii (liczbę przypadków), przypadkiem przy okazji mogłam zniwelować też efekt zamożności.
 
-### Gospodarka
+## Gospodarka
 
 Jedną z głównych osi napięcia jest ta między restrykcjami związanymi z epidemią a potrzebami gospodarki. Zamykanie lokali usługowych, wstrzymanie ruchu turystycznego, zwalnianie pracowników, którzy nie mogą realizować swojej pracy w domach - to wszystko w oczywisty sposób prowadzi do spowolnienia.
 
@@ -370,11 +374,11 @@ stock %>% mutate(label = paste(country, index)) %>%
 
 
 
-## Front walki z wirusem
+# Front walki z wirusem
 
 Przechodzimy wreszcie do analizy działań rządów. Zbiór danych został przygotowany w ramach projektu *Oxford COVID-19 Government Response Tracker* ([źródło](https://github.com/OxCGRT/covid-policy-tracker)). Zawiera kilkanaście zmiennych określających stopień wykorzystania różnych środków walki z epidemią poszczególnych państw, notowanych codziennie, oraz obliczony na ich podstawie Wskaźnik Surowości (Stringency Index).
 
-### Zmienne
+## Zmienne
 
 Pierwsza grupa zmiennych odnosi się do **zakazów i ograniczeń nałożonych na obywateli**. Są to:
 
@@ -408,7 +412,7 @@ Wreszcie trzecia grupa dotyczy **działań w formie finansowej**:
 - [H5] inwestycja w badania nad szczepionką: wyrażona w USD;
 
 
-### Wskaźnik surowości
+## Wskaźnik surowości
 
 Wskaźnik jest obliczany na podstawie pierwszej grupy oraz zmiennej H1. Dla każdej zmiennej sumowana jest jej wartość oraz wartość flagi (jeśli występuje) i dzielona przez maksymalną wartość, jaką da się dla niej uzyskać. **Wskaźnik jest średnią ze wszystkich tak obliczonych wartości.** Można go interpretować jako intensywność działań o charakterze legislacyjnym, podejmowanych przez rządy.
 
@@ -447,7 +451,7 @@ W pierwszej grupie działania były intensyfikowane stopniowo: zaczynając już 
 W drugiej i trzeciej grupie restrykcje są wprowadzane gwałtownie i niemal w tym samym czasie (połowa marca). Ostatecznie wszędzie wskaźnik osiąga podobne poziomy: 60 - 90%
 
 
-### Styl kryzysowy
+## Styl kryzysowy
 
 
 Oprócz intensywności działań, można również rozważać różnice w stylu radzenia sobie z kryzysem. Zamiast jednego wskaźnika, obliczę dwa: dla grupy restrykcji i zakazów (C1 - C8) oraz dla grupy działań podejmowanych przez państwo (E1, E2, H1 - H3). Pozycja w przestrzeni wyznaczonej przez te dwie osie pokazuje styl radzenia sobie z kryzysem epidemii.
@@ -472,7 +476,7 @@ Z drugiej strony, lekkość nakładania na obywateli restrykcji i zamykania cał
 
 
 
-### Działania ekonomiczne
+## Działania ekonomiczne
 
 Osobno będziemy rozpatrywać zastrzyki finansowe. 
 
@@ -528,7 +532,7 @@ econ_measures_scaled %>% filter(intr_support > 0) %>%
 ```
 
 
-## Tworzenie wskaźników
+# Tworzenie wskaźników
 
 W poprzednich sekcjach starałam się przedstawić jak najszerzej sytuację i uzasadnić dokonane wybory. Teraz spróbuję podsumować zebrane informacje w następujących wskaźnikach:
 
@@ -553,28 +557,46 @@ Wskaźniki można by zagregować średnią ważoną, żeby ustawić państwa w k
 
 Zupełnie innym podejściem jest znalezienie **zbioru rozwiązań optymalnych w sensie Pareto**. Każde państwo traktujemy jak jedno rozwiązanie problemu epidemii, który chcemy optymalizować pod kątem wymienionych wyżej czterech kryteriów. Rozwiązanie jest **zdominowane**, jeśli można znaleźć inne rozwiązanie, które jest lepsze pod względem jednego z kryteriów i lepsze bądź równe pod względem wszystkich pozostałych. 
 
-Zbiór **niezdominowanych** rozwiązań jest optymalny w sensie Pareto - nie ma jednego państwa, które radzi sobie absolutnie najlepiej, ale każde z nich najlepiej realizuje swoją specyficzną strategię. Państwa, które okazały się niezdominowane to: **Irlandia, Luksemburg, Włochy, Francja, Szwajcaria, Austria, Rumunia, Estonia, Bułgaria, Finlandia i Niemcy**.
+Zbiór **niezdominowanych** rozwiązań jest optymalny w sensie Pareto - nie ma jednego państwa, które radzi sobie absolutnie najlepiej, ale każde z nich najlepiej realizuje swoją specyficzną strategię. Państwa, które okazały się niezdominowane to: **Irlandia, Luksemburg, Włochy, Francja, Szwajcaria, Austria, Rumunia, Estonia, Bułgaria, Finlandia, Niemcy i Czechy**.
 
 ```{r pareto}
-epid_best <- index_table %>% arrange(epid_index) %>% slice(1)
+search_pareto <- function(base, nr) {
+  epid_best <- base %>% arrange(epid_index) %>% slice(nr)
 
-epid_pareto <- index_table %>% filter((healthcare_index <= epid_best$healthcare_index) |
+epid_pareto <- base %>% filter((epid_index <= epid_best$epid_index) | 
+  (healthcare_index <= epid_best$healthcare_index) |
   (style_index <= epid_best$style_index) | (econ_index >= epid_best$econ_index))
 
-health_best <- epid_pareto %>% arrange(healthcare_index) %>% slice(1)
+health_best <- epid_pareto %>% arrange(healthcare_index) %>% slice(nr)
 
 health_pareto <- epid_pareto %>% filter((epid_index <= health_best$epid_index) |
-   (style_index <= health_best$style_index) | (econ_index >= health_best$econ_index))
+   (style_index <= health_best$style_index) | (healthcare_index <= health_best$healthcare_index) |
+     (econ_index >= health_best$econ_index))
 
-style_best <- health_pareto %>% arrange(style_index) %>% slice(1)
+style_best <- health_pareto %>% arrange(style_index) %>% slice(nr)
 
-style_pareto <- health_pareto %>% filter(epid_index <= style_best$epid_index |
-   healthcare_index <= style_best$healthcare_index | econ_index >= style_best$econ_index)
+style_pareto <- health_pareto %>% filter((epid_index <= style_best$epid_index) |
+   (healthcare_index <= style_best$healthcare_index) | (style_index <= style_best$style_index) |
+     (econ_index >= style_best$econ_index))
 
-econ_best <- style_pareto %>% arrange(desc(econ_index)) %>% slice(1)
+econ_best <- style_pareto %>% arrange(desc(econ_index)) %>% slice(nr)
 
-econ_pareto <- style_pareto %>% filter(epid_index <= econ_best$epid_index |
-   healthcare_index <= econ_best$healthcare_index | style_index <= econ_best$style_index)
+econ_pareto <- style_pareto %>% filter((epid_index <= econ_best$epid_index) |
+   (healthcare_index <= econ_best$healthcare_index) | (style_index <= econ_best$style_index)
+   | (econ_index >= econ_best$econ_index))
+
+return(econ_pareto)
+}
+
+base <- index_table
+nr <- 1
+repeat {
+  base <- search_pareto(base, nr)
+  nr <- nr+1
+  if(nr == dim(base)[1]){
+    break
+  }
+}
 
 ```
 
@@ -591,19 +613,19 @@ ranks_table <- index_table %>%
   mutate(health_ranks = (healthcare_index - min_health)/range_health) %>%
   mutate(style_ranks = (style_index - min_style)/range_style) %>%
   mutate(econ_ranks = 1-(econ_index - min_econ)/range_econ) %>%
-  mutate(index = (epid_ranks + health_ranks + style_ranks + econ_ranks)/4)
+  mutate(index = (epid_ranks + health_ranks + style_ranks + econ_ranks)/4) %>%
+  mutate(position = rank(index, ties.method = "min"))
 
-ranks_table %>% select(location,epid_ranks,health_ranks,style_ranks,econ_ranks,index,position) %>% kable(caption = "Klasyfikacja", col.names = c("Państwo", "Hamowanie epidemii", "Jakość służby zdrowia", "Styl zarządzania", "Giełda", "Średnia", "Pozycja"), digits = 4)
+ranks_table %>% select(location,epid_ranks,health_ranks,style_ranks,econ_ranks,index,position) %>% arrange(position) %>%
+  kable(caption = "Klasyfikacja", col.names = c("Państwo", "Hamowanie epidemii", "Jakość służby zdrowia", "Styl zarządzania", "Giełda", "Średnia", "Pozycja"), digits = 4)
 ```
 
-Na podium znalazły się Finlandia i Niemcy (oba wypadły najlepiej w kategoriach "medycznych", a przeciętnie w pozostałych) oraz Szwajcaria (z najmniejszym spadkiem na giełdzie i niezłym miejscem pod względem jakości służby zdrowia). Polska sprawdziła się dobrze w hamowaniu epidemii, ale wypadła bardzo słabo we wszystkich pozostałych kategoriach, więc zajęła niechlubne ostatnie miejsce, razem z Grecją.
+Na podium znalazły się Finlandia, Szwajcaria i Niemcy. Polska sprawdziła się dobrze w hamowaniu epidemii, ale wypadła słabo we wszystkich pozostałych kategoriach, więc zajęła miejsce w ogonie tabeli.
 
-W wynikach nie widać wyraźnych wzorców związanych z położeniem geograficznym, zamożnością czy ludnością państw. Ciekawe jest jednak to, że cztery z pięciu państw udzielających pomocy międzynarodowej i pięć z sześciu państw inwestujących w tworzenie szczepionki znalazło się w pierwszej dziesiątce - może hojność jednak popłaca?
-
-## Podsumowanie
+# Podsumowanie
 
 To już wszystko. Rozgryzanie tych danych było ciekawym doświadczeniem i przyznam, że gdybym miała przed tym zgadywać wyniki klasyfikacji, wypadłabym bardzo słabo. 
 
-Mam przede wszystkim nadzieję, że ta analiza pokaże wam, że przejście od prostych liczb do wniosków o ich przyczynach nie jest ani łatwe, ani oczywiste. Po drodze trzba postawić szereg założeń, dotyczących zarówno rzeczywistego świata jak i własnych priorytetów i przekonania o tym, co jest korzystne, a co nie. 
+Mam przede wszystkim nadzieję, że ta analiza pokaże wam, że przejście od prostych liczb do wniosków o ich przyczynach nie jest ani łatwe, ani oczywiste. Po drodze trzba postawić szereg założeń, dotyczących zarówno rzeczywistego świata jak i własnych priorytetów i przekonania o tym, co jest korzystne, a co nie. Trzeba pamiętać, że klasyfikacja mogłaby ulec zmianie, gdyby uwzględnić inne czynniki - to oczywiste, że ocena ulega zmianie, gdy zmienia się to, co oceniamy. 
 
-Trzeba pamiętać, że klasyfikacja mogłaby ulec zmianie, gdyby uwzględnić inne czynniki - to oczywiste, że ocena ulega zmianie, gdy zmienia się to, co oceniamy. 
+Nie można bezkrytycznie traktować analiz statystycznych jako absolutnie obiektywne, ponieważ opierają się na kryteriach i założeniach, wybranych przez *kogoś*. Ale warto je przeprowadzać i czytać, ponieważ alternatywą jest zwykle czysto subiektywna ocena, wydana na podstawie migawek z telewizji.

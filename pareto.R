@@ -14,25 +14,43 @@ index_table <- epidemic_develop_index %>% select(location, epid_index = index) %
 # style_index -> min
 # econ_index -> max
 
-epid_best <- index_table %>% arrange(epid_index) %>% slice(1)
+search_pareto <- function(base, nr) {
+  epid_best <- base %>% arrange(epid_index) %>% slice(nr)
 
-epid_pareto <- index_table %>% filter(healthcare_index <= epid_best$healthcare_index |
-  style_index <= epid_best$style_index | econ_index >= epid_best$econ_index)
+epid_pareto <- base %>% filter((epid_index <= epid_best$epid_index) | 
+  (healthcare_index <= epid_best$healthcare_index) |
+  (style_index <= epid_best$style_index) | (econ_index >= epid_best$econ_index))
 
-health_best <- epid_pareto %>% arrange(healthcare_index) %>% slice(1)
+health_best <- epid_pareto %>% arrange(healthcare_index) %>% slice(nr)
 
-health_pareto <- epid_pareto %>% filter(epid_index <= health_best$epid_index |
-   style_index <= health_best$style_index | econ_index >= health_best$econ_index)
+health_pareto <- epid_pareto %>% filter((epid_index <= health_best$epid_index) |
+   (style_index <= health_best$style_index) | (healthcare_index <= health_best$healthcare_index) |
+     (econ_index >= health_best$econ_index))
 
-style_best <- health_pareto %>% arrange(style_index) %>% slice(1)
+style_best <- health_pareto %>% arrange(style_index) %>% slice(nr)
 
-style_pareto <- epid_pareto %>% filter(epid_index <= style_best$epid_index |
-   healthcare_index <= style_best$healthcare_index | econ_index >= style_best$econ_index)
+style_pareto <- health_pareto %>% filter((epid_index <= style_best$epid_index) |
+   (healthcare_index <= style_best$healthcare_index) | (style_index <= style_best$style_index) |
+     (econ_index >= style_best$econ_index))
 
-econ_best <- style_pareto %>% arrange(desc(econ_index)) %>% slice(1)
+econ_best <- style_pareto %>% arrange(desc(econ_index)) %>% slice(nr)
 
-econ_pareto <- style_pareto %>% filter(epid_index <= econ_best$epid_index |
-   healthcare_index <= econ_best$healthcare_index | style_index <= econ_best$style_index)
+econ_pareto <- style_pareto %>% filter((epid_index <= econ_best$epid_index) |
+   (healthcare_index <= econ_best$healthcare_index) | (style_index <= econ_best$style_index)
+   | (econ_index >= econ_best$econ_index))
+
+return(econ_pareto)
+}
+
+base <- index_table
+nr <- 1
+repeat {
+  base <- search_pareto(base, nr)
+  nr <- nr+1
+  if(nr == dim(base)[1]){
+    break
+  }
+}
 
 
 # klasyfikacja "medalowa"
