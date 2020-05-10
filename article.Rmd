@@ -27,7 +27,7 @@ Epidemia nowego koronawirusa uruchomiła w nas rzadko spotykaną zgodność. Og�
 
 Ale przede wszystkim, kryzys daje okazję do ciskania gromów na rządzących. Jedni kochają nienawidzić swoich decydentów, inni kochają nienawidzić wszystkich pozostałych - a epidemia dostarcza wszystkim świeżych materiałów. 
 
-W tej analizie chcę przyjrzeć się sytuacji państw UE, porównując, jak reagowały na zagrożenie i jak sobie z nim radziły. 
+W tej analizie chcę przyjrzeć się sytuacji państw UE, porównując, jak reagowały na zagrożenie i jak sobie z nim radziły. Mam nadzieję, że tekst okaże się przystępny nawet dla osób niezaznajomionych zbyt dobrze ze statystyką i pokaże Wam od innej strony to, co prawdopodobnie i tak śledzicie od dłuższego czasu.
 
 
 # Problemy
@@ -218,7 +218,7 @@ cases_clean <- tests_cases_model$coefficients[1] + tests_cases_model$residuals
 cases_basic_and_clean <- data.frame(cases = cases_modified$cases, cases_clean)
 ```
 
-$R^2$ = `r round(summ$r.squared,4)`
+Współczynnik determinacji $R^2$ wynosi `r round(summ$r.squared,4)`. Oznacza on procent zmienności liczby przypadków, wyjaśniony przez liczbę testów. Różnica liczby przypadków między jednym a drugim państwem w `r round(summ$r.squared,2)*100` wynika z różnicy liczby przeprowadzonych testów, a tylko w `r 100-round(summ$r.squared,4)` z innych czynników, czyli faktycznej różnicy w skali epidemii.
 
 (Analogicznie rozważyłam również wpływ struktury demograficznej społeczeństwa - odsetek osób po 60. roku życie - ale okazał się nieistotny.)
 
@@ -541,6 +541,9 @@ W poprzednich sekcjach starałam się przedstawić jak najszerzej sytuację i uz
 - stosunek stopnia ograniczeń nałożonych na obywateli do stopnia działań podjętych przez państwo - jako **wskaźnik stylu rządzenia w kryzysie**. Im wyższe wartości, tym bardziej "autorytarny" styl;
 - najgłębszy procentowy spadek głównego indeksu giełdowego w stosunku do końca roku 2019 - jako **wskaźnik kryzysu gospodarczego**. Im większa liczba (mniejszy spadek) tym lepiej;
 
+Idea jest taka, że wskaźniki mają mierzyć **sytuacje państw/społeczeństw**, a nie skalę podejmowanych działań. Dlatego nie ma w nich zawartej informacji np. o podanych wyżej nakładach na służbę zdrowia czy ratowanie gospodarki. Wskaźnik stylu rządzenia jest liczony z tych danych, ale zawiera informację o proporcji jednego typu działań do innego, a nie o ich obiektywnym natężeniu. Nie mierzy on, **jak dużo państwo robi**, ale czy dla obywatela państwo przejawia się w kryzysie jako przede wszystkim **źródło pomocy** czy **źródło restrykcji**. 
+
+
 ```{r index_table}
 index_table <- epidemic_develop_index %>% select(location, epid_index = index) %>%
   left_join(healthcare_index) %>% 
@@ -629,3 +632,6 @@ To już wszystko. Rozgryzanie tych danych było ciekawym doświadczeniem i przyz
 Mam przede wszystkim nadzieję, że ta analiza pokaże wam, że przejście od prostych liczb do wniosków o ich przyczynach nie jest ani łatwe, ani oczywiste. Po drodze trzba postawić szereg założeń, dotyczących zarówno rzeczywistego świata jak i własnych priorytetów i przekonania o tym, co jest korzystne, a co nie. Trzeba pamiętać, że klasyfikacja mogłaby ulec zmianie, gdyby uwzględnić inne czynniki - to oczywiste, że ocena ulega zmianie, gdy zmienia się to, co oceniamy. 
 
 Nie można bezkrytycznie traktować analiz statystycznych jako absolutnie obiektywne, ponieważ opierają się na kryteriach i założeniach, wybranych przez *kogoś*. Ale warto je przeprowadzać i czytać, ponieważ alternatywą jest zwykle czysto subiektywna ocena, wydana na podstawie migawek z telewizji.
+
+
+[repozytorium](https://github.com/agachocz/EU_in_pandemic)
