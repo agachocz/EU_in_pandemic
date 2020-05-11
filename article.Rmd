@@ -218,7 +218,7 @@ cases_clean <- tests_cases_model$coefficients[1] + tests_cases_model$residuals
 cases_basic_and_clean <- data.frame(cases = cases_modified$cases, cases_clean)
 ```
 
-Współczynnik determinacji $R^2$ wynosi `r round(summ$r.squared,4)`. Oznacza on procent zmienności liczby przypadków, wyjaśniony przez liczbę testów. Różnica liczby przypadków między jednym a drugim państwem w `r round(summ$r.squared,2)*100` wynika z różnicy liczby przeprowadzonych testów, a tylko w `r 100-round(summ$r.squared,4)` z innych czynników, czyli faktycznej różnicy w skali epidemii.
+Współczynnik determinacji $R^2$ wynosi `r round(summ$r.squared,4)`. Oznacza on część zmienności liczby przypadków, wyjaśnioną przez model, czyli liczbę testów oraz stałą.
 
 (Analogicznie rozważyłam również wpływ struktury demograficznej społeczeństwa - odsetek osób po 60. roku życie - ale okazał się nieistotny.)
 
@@ -305,7 +305,9 @@ total_cases <- cases_modified %>%
 
 ```
 
-Odsetek starszych osób w społeczeństwach nie wyjaśnia dobrze różnic w śmiertelności ($R^2$ = `r  round(summ$r.squared,4)`, więc jest bardzo niskie), co oznacza, że nie można zrzucić całej winy za wyższą śmiertelność na różnice demograficzne. Być może wynika to z faktu, że badane kraje nie są zbyt mocno zróżnicowane pod tym względem. Niemniej, demografia jest istotna, więc nie zaszkodzi "oczyścić" wskaźnika śmiertelności, podobnie, jak to było robione wcześniej.
+Odsetek starszych osób w społeczeństwach nie wyjaśnia dobrze różnic w śmiertelności ($R^2$ = `r  round(summ$r.squared,4)`, więc jest bardzo niskie), co oznacza, że nie można zrzucić całej winy za wyższą śmiertelność na różnice demograficzne. Być może wynika to z faktu, że badane kraje nie są zbyt mocno zróżnicowane pod tym względem. 
+
+Liczba  w drugim wierszu i w ostatniej kolumnie oznacza **prawdopodobieństwo, że wpływ odsetka osób starszych na śmiertelność jest równy 0**. To prawdopodobieństwo jest bardzo, bardzo miałe, więc demografia jest istotna (choć odpowiada za mały procent zmienności) i nie zaszkodzi "oczyścić" wskaźnika śmiertelności, podobnie, jak to było robione wcześniej.
 
 Drugą rzeczą, którą trzeba uwzględnić, jest stosunek śmiertelności do liczby przypadków. Służby zdrowia - liczby łóżek, personelu i sprzętu - nie da się łatwo skalować. Nawet dobrze zorganizowany system może nie wytrzymać nagłego, dużego napływu pacjentów. I *vice versa*, nawet niezbyt sprawny poradzi sobie z nielicznymi przypadkami.
 
@@ -331,11 +333,11 @@ healthcare_index <- total_cases %>% left_join(final_mortality) %>%
   mutate(healthcare_index = mortality/nr_cases*10000)
 ```
 
-Jeśli podzielimy przestrzeń wykresu według czerwonych linii na cztery części, to w prawym dolnym rogu znajdą się państwa, które mają niską śmiertelność mimo wysokiej liczby przypadków - Szwajcaria, Luksemburg, Portugalia, Austria i Niemcy. Ich służba zdrowia jest na tyle sprawna, że jest w stanie ratować pacjentów nawet przy dużej ich liczbie.
+Jeśli podzielimy przestrzeń wykresu według czerwonych linii na cztery części, to w prawym dolnym rogu znajdą się państwa, które mają niską śmiertelność mimo wysokiej liczby przypadków - Luksemburg, Portugalia, Austria i Niemcy (Szwajcaria na granicy). Ich służba zdrowia jest na tyle sprawna, że jest w stanie ratować pacjentów nawet przy dużej ich liczbie.
 
 W lewym dolnym rogu mamy państwa, które uzyskały niską śmiertelność, ale też nie musiały się zmierzyć z aż tak dużym wyzwaniem. Z kolei w prawym górnym takie, w których śmiertelność jest wysoka, ale poniekąd usprawiedliwona skalą epidemii.
 
-I wreszcie w lewym górnym rogu można znaleźć państwa o wysokiej śmiertelności mimo małej skali zachorowań - Węgry, Bułgaria, Grecja, Polska, Rumunia, Słowenia i Cypr.
+I wreszcie w lewym górnym rogu można znaleźć państwa o wysokiej śmiertelności mimo małej skali zachorowań - Węgry, Polska, Rumunia i Słowenia (Grecja oraz Dania na granicy).
 
 Ten stosunek śmiertelności do liczby przypadków możemy potraktować jako **wskaźnik jakości służby zdrowia**, przy założeniu, że trudność leczenia (zapobiegania śmierci) pacjentów jest wprost proporcjonalna do ich liczby. Wyobraźmy sobie, że w jednym szpitalu mamy 5000 pacjentów i śmiertelność 1%, a w drugim 500 pacjentów i taką samą śmiertelność 1%. Pod względem wyników szpitale mogą się wydawać dokładnie tak samo dobre. Ale intuicyjnie rozumiemy, że pierwszy szpital musi być dużo lepszy (więcej miejsca, sprzętu, personelu itd.), skoro mógł zaopiekować się dziesięciokrotnie większą liczbą pacjentów, zachowując tę samą jakość.
 
@@ -345,7 +347,7 @@ healthcare_index_gdp <- healthcare_index %>%
   summarise(cor = cor(healthcare_index, gdp))
 ```
 
-Ostatnim czynnikiem, który tu rozważałam, było PKB. Moglibyśmy się spodziewać, że bogatsze kraje będą siłą rzeczy miały lepszą służbę zdrowia, i że ten efekt należałoby uwzględnić. Okazuje się jednak, że korelacja między wskaźnikiem jakości służby zdrowia a PKB wynosi `r round(healthcare_index_gdp, 4)' i ten czynnik jest nieistotny. 
+Ostatnim czynnikiem, który tu rozważałam, było PKB. Moglibyśmy się spodziewać, że bogatsze kraje będą siłą rzeczy miały lepszą służbę zdrowia, i że ten efekt należałoby uwzględnić. Okazuje się jednak, że korelacja między wskaźnikiem jakości służby zdrowia a PKB wynosi `r round(healthcare_index_gdp, 4)` i ten czynnik jest nieistotny. 
 
 Dlaczego tak się dzieje? Oczywiście może istnieć wiele czynników uniezależniających jakość służby zdrowia od PKB (np. różnice w tym, jak duża część PKB idzie na służbę zdrowia, albo "nieprodukcyjny" charakter tej dziedziny), ale w tym przypadku prawdopodobnie wynika to z silnego związku między zamożnością państw a rozwojem epidemii. Z pierwszych 10 państw, w których pojawił się wirus, aż 7 jest w pierwszej dziesiątce pod względem PKB. Dzieląc śmiertelność przez rozmiar epidemii (liczbę przypadków), przypadkiem przy okazji mogłam zniwelować też efekt zamożności.
 
@@ -353,7 +355,7 @@ Dlaczego tak się dzieje? Oczywiście może istnieć wiele czynników uniezależ
 
 Jedną z głównych osi napięcia jest ta między restrykcjami związanymi z epidemią a potrzebami gospodarki. Zamykanie lokali usługowych, wstrzymanie ruchu turystycznego, zwalnianie pracowników, którzy nie mogą realizować swojej pracy w domach - to wszystko w oczywisty sposób prowadzi do spowolnienia.
 
-Ponownie natrafiamy tu na szereg problemów. Makroekonomiczne wskaźniki - jak bezrobocie czy PKB - nie są obliczane na bieżąco. Oczywistym rozwiązaniem są giełdy, publikujące notowania codziennie. Indeksy, takie jak WIG, odzwierciedlają ogólny stan giełdy i są używane jako wskaźniki stanu gospodarki, ale wciąż trzeba pamiętać, że gospodarka nie sprowadza się do spółek akcyjnych. A także, że indeksy są konstruowane w różny sposób i niekoniecznie w pełni porównywalne.
+Ponownie natrafiamy tu na szereg problemów. Makroekonomiczne wskaźniki - jak bezrobocie czy PKB - nie są obliczane na bieżąco. Oczywistym rozwiązaniem są giełdy, publikujące notowania codziennie. Indeksy, takie jak WIG, odzwierciedlają ogólny stan giełdy i są używane jako wskaźniki stanu gospodarki, ale wciąż trzeba pamiętać, że **gospodarka nie sprowadza się do spółek akcyjnych**. A także, że indeksy są konstruowane w różny sposób i niekoniecznie w pełni porównywalne.
 
 Drugi problem jest taki, że trudno znaleźć obiektywny punkt odniesienia. Na wykresie porównano procentowe przyrosty (wszystkie są ujemne) głównych indeksów giełdowych między końcem zeszłego roku (30.12.19) a końcem badanego okresu (30.04.20) oraz najniższym notowaniem osiągniętym w całym tym okresie (dla większości było to w marcu). Widać, że spadek mógł sięgać niemal 50%. Niektóre państwa, jak Dania, zdążyły do końca kwietnia skoczyć do góry. Inne, jak Cypr, pozostały na podobnym poziomie.
 
@@ -372,7 +374,7 @@ stock %>% mutate(label = paste(country, index)) %>%
        x = "Państwo", y = "Procentowa zmiana")
 ```
 
-
+W końcowej części analizy będę brać pod uwagę **najgłębszy spadek na giełdzie**, który jest w tej sytuacji najlepszą miarą kryzysu, jaki giełda zaliczyła w związku z koronawirusem, ale nie musi się w żaden sposób przekładać na dotkliwość kryzysu, jaki czeka nas po zakończeniu epidemii.
 
 # Front walki z wirusem
 
@@ -380,7 +382,7 @@ Przechodzimy wreszcie do analizy działań rządów. Zbiór danych został przyg
 
 ## Zmienne
 
-Pierwsza grupa zmiennych odnosi się do **zakazów i ograniczeń nałożonych na obywateli**. Są to:
+Pierwsza grupa zmiennych (podział na grupy jest mój) odnosi się do **zakazów i ograniczeń nałożonych na obywateli**. Są to:
 
 - [C1] zamykanie szkół i uniwersytetów: 0 - brak; 1 - rekomendowane; 2 - nakazane zamknięcie określonego rodzaju (np. tylko szkół wyższych lub tylko publicznych); 3 - nakazane zamknięcie wszystkich rodzajów szkół;
 - [C2] zamykanie miejsc pracy: 0 - brak; 1 - rekomendowane; 2 - nakazane dla niektórych zawodów; 3 - nakazane dla wszystkich, z wyjątkiem niezbędnych zawodów; 
@@ -454,7 +456,7 @@ W drugiej i trzeciej grupie restrykcje są wprowadzane gwałtownie i niemal w ty
 ## Styl kryzysowy
 
 
-Oprócz intensywności działań, można również rozważać różnice w stylu radzenia sobie z kryzysem. Zamiast jednego wskaźnika, obliczę dwa: dla grupy restrykcji i zakazów (C1 - C8) oraz dla grupy działań podejmowanych przez państwo (E1, E2, H1 - H3). Pozycja w przestrzeni wyznaczonej przez te dwie osie pokazuje styl radzenia sobie z kryzysem epidemii.
+Oprócz intensywności działań, można również rozważać różnice w stylu radzenia sobie z kryzysem. Zamiast jednego wskaźnika, obliczę dwa: dla grupy restrykcji i zakazów (C1 - C8) oraz dla grupy działań podejmowanych przez państwo (E1, E2, H1 - H3). Pozycja w przestrzeni wyznaczonej przez te dwie osie pokazuje styl radzenia sobie z kryzysem epidemii. (Wykres pokazuje wartości wskaźników w maksymalnym punkcie, nie uwzględnia ich zmienności w czasie.)
 
 ```{r strategy}
 
@@ -552,11 +554,11 @@ index_table <- epidemic_develop_index %>% select(location, epid_index = index) %
   left_join(stock, by = c("location" = "country")) %>% 
   select(location, epid_index, healthcare_index, style_index, econ_index = max_change)
 
-kable(index_table, digits = 4, caption = "Wartości wskaźników", 
+kable(index_table, digits = 4, caption = "Wartości wskaźników (zaokrąglone)", 
       col.names = c("Państwo", "Wskaźnik rozwoju epidemii", "Wskaźnik jakości służby zdrowia","Wskaźnik stylu zarządzania", "Wskaźnik kryzysu na giełdzie"))
 ```
 
-Wskaźniki można by zagregować średnią ważoną, żeby ustawić państwa w kolejności od najlepiej radzącego sobie z epidemią do najgorszych. Wybranie wag nie jest jednak łatwe, bo każdy wskaźnik ma inny charakter i skalę. Wymagałoby to też decyzji, jak duże znaczenie dla ostatecznej oceny mają poszczególne wskaźniki. Można by na przykład uznać, że wskaźnik stylu zarządzania w kryzysie jest dużo mniej istotny niż pozostałe, albo że gospodarka jest ważniejsza niż liczba przypadków, skoro zdecydowana większość z nich nie jest poważnym zagrożeniem dla zdrowia.
+Wskaźniki można by zagregować średnią ważoną, żeby ustawić państwa w kolejności od najlepiej radzącego sobie z epidemią do najgorszych. Wybranie wag nie jest jednak łatwe, bo każdy wskaźnik ma inny charakter i skalę. Wymagałoby to też decyzji, jak duże znaczenie dla ostatecznej oceny mają poszczególne wskaźniki. Można by na przykład uznać, że wskaźnik stylu zarządzania w kryzysie jest dużo mniej istotny niż pozostałe, albo że gospodarka jest ważniejsza niż liczba przypadków, skoro zdecydowana większość z nich nie jest poważnym zagrożeniem dla zdrowia - albo dokładnie na odwrót.
 
 Zupełnie innym podejściem jest znalezienie **zbioru rozwiązań optymalnych w sensie Pareto**. Każde państwo traktujemy jak jedno rozwiązanie problemu epidemii, który chcemy optymalizować pod kątem wymienionych wyżej czterech kryteriów. Rozwiązanie jest **zdominowane**, jeśli można znaleźć inne rozwiązanie, które jest lepsze pod względem jednego z kryteriów i lepsze bądź równe pod względem wszystkich pozostałych. 
 
@@ -604,7 +606,7 @@ repeat {
 ```
 
 
-Jeśli założymy, że **wszystkie kryteria mają takie samo znaczenie**, to problem różnych jednostek i rzędów wielkości wskaźników można ominąć, konstruując coś w rodzaju *klasyfikacji medalowej*. Najpierw rzutuję wszystkie wskaźniki na tę samą skalę. Najlepszy (pod danym względem) kraj będzie miał wartość 0, a najgorszy 1. Teraz mogę policzyć średnią, a na końcu uszeregować państwa od najlepszego wyniku (najniższa średnia) do najgorszego (najwyższa).
+Jeśli założymy, że **wszystkie kryteria mają takie samo znaczenie**, to problem różnych jednostek i rzędów wielkości wskaźników można ominąć, konstruując coś w rodzaju **klasyfikacji medalowej**. Najpierw rzutuję wszystkie wskaźniki na tę samą skalę. Najlepszy (pod danym względem) kraj będzie miał wartość 0, a najgorszy 1. Teraz mogę policzyć średnią, a na końcu uszeregować państwa od najlepszego wyniku (najniższa średnia) do najgorszego (najwyższa).
 
 ```{r ranks}
 ranks_table <- index_table %>%
